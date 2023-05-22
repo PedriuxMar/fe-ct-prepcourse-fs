@@ -171,6 +171,8 @@ function esPrimo(num) {
    // Tu código:
    var primo=true;
    var m;
+   if (num<2)
+      return false;
    for(let i=2;i<num;i++){
       m=num%i;
       if (m===0){
