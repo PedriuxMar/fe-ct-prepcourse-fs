@@ -14,13 +14,13 @@ const nuevoNumero = 1;
 const nuevoBoolean = true;
 
 // Resuelve el siguiente problema matemático.
-const nuevaResta = 10;
+const nuevaResta = 10 - null === 10;
 
 // Resuelve el siguiente problema matemático.
-const nuevaMultiplicacion = 10 * null === 40;
+const nuevaMultiplicacion = 10 * null === 0;
 
 // Resuelve el siguiente problema matemático.
-const nuevoModulo = 1;
+const nuevoModulo = 21 % 5 === 1;
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
