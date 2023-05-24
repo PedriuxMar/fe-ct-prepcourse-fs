@@ -173,17 +173,28 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   var f=false;
-   var arrayNew=[];
+   var e=false;
+   var m=false;
+   var n=false;
+   var arraynew=[];
    for (i=0;i<array.length;i++){
-      if (array[i]==="Enero"||array[i]==="Marzo"||array[i]==="Noviembre"){
-         arrayNew.push(array[i]);
-         f=true;
+      if (array[i]==="Enero"){
+         e=true;
+         arraynew.push(array[i])
+      }
+      else if (array[i]==="Marzo"){
+         m=true;
+         arraynew.push(array[i]);
+      }
+      else if (array[i]==="Noviembre"){
+         n=true;
+         arraynew.push(array[i]);
       }
    }
-   if (f){
-      return arrayNew;
+   if (e && m && n){
+      return arraynew;
    }
+   else
       return "No se encontraron los meses pedidos";
 }
 
@@ -223,6 +234,14 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   var array=[];
+   for (let i=1;i<11;i++){
+      array.push(num+2*i);
+      if (array[array.length-1]===i){
+         return "Se interrumpió la ejecución";
+      }
+   }
+   return array;
 }
 
 function continueStatement(num) {
@@ -232,6 +251,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var array=[];
+   for (let i=1; i<10;i++){
+    //  if (i===5){
+      //   continue;
+     // }
+      array.push(num+2*i);
+   }
+   console.log(array);
+   return array;
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
