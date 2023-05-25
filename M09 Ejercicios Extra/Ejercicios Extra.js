@@ -120,8 +120,20 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
-
-   
+   var min=0;
+   var word=arrayOfStrings[min];
+   var resultado=[];
+   do{
+     for (let index = 0; index < arrayOfStrings.length; index++) {
+         if (arrayOfStrings[index]<arrayOfStrings[min]){
+            min=index;
+            i=0;
+         }
+      } 
+      resultado.push(arrayOfStrings[min]);
+      arrayOfStrings.splice(min,1);
+   }while(arrayOfStrings.length>0);
+   return resultado;
 }
 
 function buscoInterseccion(array1, array2) {
