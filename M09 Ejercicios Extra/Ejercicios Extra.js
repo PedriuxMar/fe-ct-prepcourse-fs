@@ -125,13 +125,14 @@ function sortArray(arrayOfStrings) {
    var resultado=[];
    do{
      for (let index = 0; index < arrayOfStrings.length; index++) {
-         if (arrayOfStrings[index]<arrayOfStrings[min]){
+         if (arrayOfStrings[index].length<arrayOfStrings[min].length){
             min=index;
             i=0;
          }
       } 
       resultado.push(arrayOfStrings[min]);
       arrayOfStrings.splice(min,1);
+      min=0;
    }while(arrayOfStrings.length>0);
    return resultado;
 }
